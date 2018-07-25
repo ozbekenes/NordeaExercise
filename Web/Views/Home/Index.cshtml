@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Formatter";
+}
+@section Scripts {
+    <script src="~/js/site.js"></script>
+    <link href="~/css/site.css" rel="stylesheet" />
+}
+<div class="row">
+    <div class="col-md-4">
+        <div class="well">
+            <p>Input your text below.</p>
+            <div class="form-group">
+                <textarea name="InputText" class="form-control" id="InputText" rows="20"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <br /> <br />
+        <label class="radio inline">
+            <input type="radio" name="FormatType" id="inlineRadio1" value="XML" checked="checked">
+            <span>XML</span>
+        </label>
+        <label class="radio inline">
+            <input type="radio" name="FormatType" id="inlineRadio2" value="CSV">
+            <span>CSV</span>
+        </label>
+        <button class="btn btn-primary btn-block btn-lg" id="formatter">Format</button>
+    </div>
+    <div class="col-md-6">
+        <div class="well">
+            <p>The formatted result.</p>
+            <div class="form-group">
+                <textarea id="resultTextArea" class="form-control" rows="20"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
