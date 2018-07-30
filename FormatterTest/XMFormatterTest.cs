@@ -40,7 +40,8 @@ namespace FormatterTest
   </Sentence>
 </Text>";
             //Act
-            var actual = XMLFormatter.Write(input);
+            var xmlFormatter = new XMLFormatter();
+            var actual = xmlFormatter.Format(input);
 
             //Assert
             expected.Should().BeEquivalentTo(actual);

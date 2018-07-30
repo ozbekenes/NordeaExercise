@@ -23,16 +23,11 @@ namespace Web.Controllers.Api
             {
                 return Content("Input your text.");
             }
-
+            
             var splittedSentences = _formatter.Format(request.InputText);
-            if (request.FormatType == FormatType.XML)
-            {
-                return Content(XMLFormatter.Write(splittedSentences));
-            }
-            else
-            {
-                return Content(CSVFormatter.Write(splittedSentences));
-            }
+            var genericFormatter = new GenericFormatter();
+            var formatter = genericFormatter.Create((FormatType)request.FormatType);
+            return Content(formatter.Format(splittedSentences));
         }
     }
 }

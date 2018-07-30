@@ -5,12 +5,13 @@ using System.Xml.Serialization;
 
 namespace NordeaFormatter
 {
-    public static class XMLFormatter
+    public class XMLFormatter : IFormatter
     {
-        public static string Write(List<Sentence> sentences)
+
+        public string Format(List<Sentence> items)
         {
             TestObjects test = new TestObjects();
-            test.AddRange(sentences);
+            test.AddRange(items);
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(TestObjects));
             XmlSerializerNamespaces nameSpace = new XmlSerializerNamespaces();
             nameSpace.Add("", "");

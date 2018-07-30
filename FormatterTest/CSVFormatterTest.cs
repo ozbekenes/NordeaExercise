@@ -23,7 +23,8 @@ Sentence 1, a, had, lamb, little, Mary
 Sentence 2, Aesop, and, called, came, for, Peter, the, wolf";
 
             //Act
-            var actual = CSVFormatter.Write(input);
+            var csvFormatter = new CSVFormatter();
+            var actual = csvFormatter.Format(input);
 
             //Assert
             expected.Should().BeEquivalentTo(actual);
