@@ -1,4 +1,4 @@
-I develop this task with technology ASP.NET WebAPI / ASP.NET Core.
+I developed this task with technology ASP.NET WebAPI / ASP.NET Core.
 
 The basic requirement is to provide a program that can convert text into either XML format-ted data or comma separated (CSV) data. The text is to be parsed, broken into sentences and words and the words have to be sorted.
 
